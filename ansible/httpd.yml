@@ -4,7 +4,7 @@
   become: yes
   tasks:
     - name: installing apache httpd service
-      yum:
+      apt:
         name: httpd
         state: present
     - name: start and enable httpd service
@@ -12,3 +12,4 @@
         name: httpd
         state: started
         enabled: yes
+        update_cache: yes
